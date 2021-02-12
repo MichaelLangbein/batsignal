@@ -39,26 +39,26 @@ export class ConfirmDialogComponent implements OnInit {
     console.log('Sending data: ', this.data);
     
     if (environment.production) {
-      // const userId = 'user_djbx0rfioGQKFZnvDo7t8';
-      // const serviceId = 'user_djbx0rfioGQKFZnvDo7t8';
-      // const templateId = 'template_m8m9oci';
-      // emailJs.init(userId);
-      // emailJs.send(serviceId, templateId, this.data, userId).then(
-      //   (response) => {
-      //     console.log('success: ', response);
-      //     this.state$.next({
-      //       state: 'success',
-      //       message: 'Michael wurde benachrichtigt'
-      //     });
-      //   },
-      //   (error) => {
-      //     console.error(error);
-      //     this.state$.next({
-      //       state: 'error',
-      //       message: `Ein Fehler ist aufgetreten: ${JSON.stringify(error)}`
-      //     });
-      //   }
-      // );
+      const userId = 'user_djbx0rfioGQKFZnvDo7t8';
+      const serviceId = 'user_djbx0rfioGQKFZnvDo7t8';
+      const templateId = 'template_m8m9oci';
+      emailJs.init(userId);
+      emailJs.send(serviceId, templateId, this.data, userId).then(
+        (response) => {
+          console.log('success: ', response);
+          this.state$.next({
+            state: 'success',
+            message: 'Michael wurde benachrichtigt'
+          });
+        },
+        (error) => {
+          console.error(error);
+          this.state$.next({
+            state: 'error',
+            message: `Ein Fehler ist aufgetreten: ${JSON.stringify(error)}`
+          });
+        }
+      );
     } else {
       setTimeout(() => {
         this.state$.next({
@@ -68,7 +68,7 @@ export class ConfirmDialogComponent implements OnInit {
             'message': 'here'
           }
         });
-      }, 3000);
+      }, 2000);
     }
 
   }

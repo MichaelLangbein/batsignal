@@ -2,31 +2,35 @@
   <span>Hallo, du {{ title }}!</span>
 </mat-toolbar>
 
+<main>
+      <mat-card>
+        <mat-card-title>
+          Körper
+        </mat-card-title>
+        <mat-card-content>
+          <mat-action-list>
+            <!-- https://material.io/resources/icons/?style=baseline -->
+            <button mat-list-item (click)="openDialog('hungrig')"><mat-icon>{{ iconList['hungrig'] }}</mat-icon>Hunger</button>
+            <button mat-list-item (click)="openDialog('durstig')"><mat-icon>{{ iconList['durstig'] }}</mat-icon>Durst</button>
+            <button mat-list-item (click)="openDialog('kalt')"><mat-icon>{{ iconList['kalt'] }}</mat-icon>Kalt</button>
+          </mat-action-list>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card>
+        <mat-card-title>
+          Seele
+        </mat-card-title>
+        <mat-card-content>
+          <mat-action-list>
+            <button mat-list-item (click)="openDialog('einsam')"><mat-icon>{{ iconList['einsam'] }}</mat-icon>Einsam</button>
+            <button mat-list-item (click)="openDialog('langweilig')"><mat-icon>{{ iconList['langweilig'] }}</mat-icon>Gelangweilt</button>
+            <button mat-list-item (click)="openDialog('wütend')"><mat-icon>{{ iconList['wütend'] }}</mat-icon>Wütend</button>
+          </mat-action-list>
+        </mat-card-content>
+      </mat-card>
+</main>
 
-<mat-card>
-  <mat-card-title>
-    Körper
-  </mat-card-title>
-  <mat-card-content>
-    <mat-action-list>
-      <!-- https://material.io/resources/icons/?style=baseline -->
-      <button mat-list-item (click)="openDialog('hungrig')"><mat-icon>{{ iconList['hungrig'] }}</mat-icon>Hunger</button>
-      <button mat-list-item (click)="openDialog('durstig')"><mat-icon>{{ iconList['durstig'] }}</mat-icon>Durst</button>
-      <button mat-list-item (click)="openDialog('kalt')"><mat-icon>{{ iconList['kalt'] }}</mat-icon>Kalt</button>
-    </mat-action-list>
-  </mat-card-content>
-</mat-card>
 
-<mat-card>
-  <mat-card-title>
-    Seele
-  </mat-card-title>
-  <mat-card-content>
-    <mat-action-list>
-      <button mat-list-item (click)="openDialog('einsam')"><mat-icon>{{ iconList['einsam'] }}</mat-icon>Einsam</button>
-      <button mat-list-item (click)="openDialog('langweilig')"><mat-icon>{{ iconList['langweilig'] }}</mat-icon>Gelangweilt</button>
-      <button mat-list-item (click)="openDialog('wütend')"><mat-icon>{{ iconList['wütend'] }}</mat-icon>Wütend</button>
-    </mat-action-list>
-  </mat-card-content>
-</mat-card>
+
 
