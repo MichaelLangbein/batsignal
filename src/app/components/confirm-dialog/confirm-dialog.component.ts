@@ -55,7 +55,7 @@ export class ConfirmDialogComponent implements OnInit {
       //     console.error(error);
       //     this.state$.next({
       //       state: 'error',
-      //       message: `Ein Fehler ist aufgetreten: ${error}`
+      //       message: `Ein Fehler ist aufgetreten: ${JSON.stringify(error)}`
       //     });
       //   }
       // );
