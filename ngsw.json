@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1613163452367,
+  "timestamp": 1613163662956,
   "index": "/batsignal/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/batsignal/favicon.ico",
         "/batsignal/index.html",
-        "/batsignal/main.15482d2b5260501fbbb0.js",
+        "/batsignal/main.ffdc3add289909a0b866.js",
         "/batsignal/manifest.webmanifest",
         "/batsignal/polyfills.35a5ca1855eb057f016a.js",
         "/batsignal/runtime.acf0dec4155e77772545.js",
@@ -44,8 +44,8 @@
     "/batsignal/assets/icons/icon-32x32.png": "c7fcd1d7a1caba741fc9c408c258e5faa045c59c",
     "/batsignal/assets/icons/icon-512x512.png": "b9dd73bc6bc80c6dacd62c0a773956e2f50ec39a",
     "/batsignal/favicon.ico": "355657b431696a4557e1ec7485394831a92b9a6d",
-    "/batsignal/index.html": "21a50bc44bada1278804cdf4c7ece1361e43dfa8",
-    "/batsignal/main.15482d2b5260501fbbb0.js": "f9e08f0e878ce8dd4cd5bae4b4e95b536ea6781c",
+    "/batsignal/index.html": "03669b3a0cdd608aee8791421225b6a6350781d5",
+    "/batsignal/main.ffdc3add289909a0b866.js": "4539fd88a9ae6d62ea75bdaf4bd63812d05c5802",
     "/batsignal/manifest.webmanifest": "7b502b0c4eb0bd38c36bd81e07c49170f401b922",
     "/batsignal/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "/batsignal/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
