@@ -34,9 +34,11 @@ export class AppComponent implements OnInit {
       data: {mood: mood}
     });
     dialogRef.afterClosed().subscribe(r => {
-      const confirmDialogRef = this.dialog.open(ConfirmDialogComponent, {
-        data: r
-      });
+      if (r) {
+        const confirmDialogRef = this.dialog.open(ConfirmDialogComponent, {
+          data: r
+        });
+      }
     });
   }
 }

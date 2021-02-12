@@ -21,9 +21,15 @@
                 </mat-list>
             </div>
 
-            <div *ngSwitchCase="'error'">
-                {{ state.message }}
-            </div>
+            <mat-card *ngSwitchCase="'error'" style="background: #F44336;">
+                <mat-card-title style="display: flex;">
+                    <mat-icon>sentiment_very_dissatisfied</mat-icon>
+                    <p>Sorry, kleiner Fehler ...</p>
+                </mat-card-title>
+                <mat-card-content>
+                    {{ state.message | json }}
+                </mat-card-content>
+            </mat-card>
 
         </ng-container>
     </ng-container>

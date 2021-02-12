@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 
 interface State {
   state: 'running' | 'success' | 'error';
-  message: string;
+  message: string | object;
 }
 
 
@@ -59,19 +59,16 @@ export class ConfirmDialogComponent implements OnInit {
       //     });
       //   }
       // );
-      setTimeout(() => {
-        this.state$.next({
-          state: 'success',
-          message: 'Michael wurde benachrichtigt.'
-        });
-      }, 2000);
     } else {
       setTimeout(() => {
         this.state$.next({
-          state: 'success',
-          message: 'Michael wurde benachrichtigt.'
+          state: 'error',
+          message: {
+            'some': 'error',
+            'message': 'here'
+          }
         });
-      }, 2000);
+      }, 3000);
     }
 
   }
