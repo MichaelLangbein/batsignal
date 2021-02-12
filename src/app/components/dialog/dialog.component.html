@@ -1,0 +1,13 @@
+<h1 mat-dialog-title><mat-icon>{{ iconList[data.mood] }}</mat-icon>Hazme ist {{ data.mood }}</h1>
+<div mat-dialog-content>
+  <p>Möchtest du mehr Informationen dazu schreiben?</p>
+  <mat-form-field>
+    <mat-label>Mehr Info:</mat-label>
+    <input matInput [(ngModel)]="data.info">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Abbrechen</button>
+  <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Absenden</button>
+</div>
+

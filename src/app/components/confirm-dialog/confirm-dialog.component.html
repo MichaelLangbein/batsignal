@@ -1,0 +1,34 @@
+<h1 mat-dialog-title><mat-icon>{{ iconList[data.mood] }}</mat-icon>Hazme ist {{ data.mood }}</h1>
+<div mat-dialog-content>
+  
+    <ng-container *ngIf="state$ | async as state">
+        <ng-container [ngSwitch]="state.state">
+            
+            <div *ngSwitchCase="'running'" style="display: flex; align-items: center;">
+                <div style="order: 1;">
+                    <mat-spinner [diameter]="40"></mat-spinner>
+                </div>
+                <p style="order: 2; margin: 0 0 0 12px;">
+                    {{ state.message }}
+                </p>
+            </div>
+
+            <div *ngSwitchCase="'success'">
+                <p>{{ state.message }}</p>
+                <mat-list role="list">
+                    <mat-list-item role="listitem">Hazme ist <i> {{ data.mood }} </i></mat-list-item>
+                    <mat-list-item role="listitem">Extra-Info: <i> {{ data.info }} </i></mat-list-item>
+                </mat-list>
+            </div>
+
+            <div *ngSwitchCase="'error'">
+                {{ state.message }}
+            </div>
+
+        </ng-container>
+    </ng-container>
+  
+</div>
+<div mat-dialog-actions>
+  <button *ngIf="(state$ | async).state == 'success'" mat-raised-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Schließen</button>
+</div>
